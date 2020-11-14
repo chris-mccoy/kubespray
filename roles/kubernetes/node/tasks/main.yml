@@ -122,7 +122,9 @@
       ip_vs_rr
       ip_vs_wrr
       ip_vs_sh
-      {% if modprobe_nf_conntrack_ipv4 is success -%}
+      {% if ansible_kernel.split('.')[0:3] | join('.')  >= '4.19' -%}
+      nf_conntrack
+      {%-   else -%}
       nf_conntrack_ipv4
       {%-   endif -%}
   when: kube_proxy_mode == 'ipvs'
