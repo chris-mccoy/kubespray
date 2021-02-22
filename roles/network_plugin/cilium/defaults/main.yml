@@ -50,4 +50,5 @@ cilium_deploy_additionally: false
 # make this work. Please refer to the cilium documentation for more
 # information about this kind of setups.
 cilium_auto_direct_node_routes: false
+cilium_enable_endpoint_routes: false
 cilium_native_routing_cidr: ""
