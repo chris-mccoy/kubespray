@@ -52,3 +52,5 @@ cilium_deploy_additionally: false
 cilium_auto_direct_node_routes: false
 cilium_enable_endpoint_routes: false
 cilium_native_routing_cidr: ""
+cilium_masquerade: true
+
